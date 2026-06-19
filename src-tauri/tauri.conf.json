@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "API Box",
+  "version": "0.1.0",
+  "identifier": "com.apibox.desktop",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [{
+      "title": "API Box",
+      "width": 1440,
+      "height": 900,
+      "minWidth": 1180,
+      "minHeight": 720,
+      "decorations": true,
+      "transparent": false
+    }],
+    "security": { "csp": null }
+  },
+  "bundle": { "active": true, "targets": "all", "icon": ["icons/icon.png"] }
+}
